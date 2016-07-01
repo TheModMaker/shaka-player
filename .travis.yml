@@ -1,0 +1,29 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - 6
+
+addons:
+  firefox: "latest"
+
+# TODO: Currently Firefox tests are failing in unknown ways.  Enable both
+# stable and beta tests after the tests are fixed.
+#matrix:
+#  include:
+#    - os: linux
+#      addons:
+#        firefox: "latest-beta"
+
+before_install:
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+
+before_script:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 2
+
+script:
+  - build/all.py --force
+  - build/test.py --browsers Chrome_Travis

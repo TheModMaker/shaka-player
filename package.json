@@ -46,5 +46,6 @@
   "license": "Apache-2.0",
   "scripts": {
     "prepublish": "in-publish && python ./build/checkversion.py && python ./build/all.py && python ./build/build.py --debug || not-in-publish"
+    "test": "python ./build/test.py"
   }
 }
