@@ -1,5 +1,10 @@
 # ![Shaka Player](docs/shaka-player-logo.png)
 
+[![Travis](https://img.shields.io/travis/TheModMaker/shaka-player.svg?maxAge=2592000?style=plastic)](https://travis-ci.org/TheModMaker/shaka-player)
+[![AppVeyor](https://img.shields.io/appveyor/ci/TheModMaker/shaka-player.svg?maxAge=2592000?style=plastic)](https://ci.appveyor.com/project/TheModMaker/shaka-player/branch/master)
+[![npm](https://img.shields.io/npm/v/shaka-player.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/shaka-player)
+[![GitHub release](https://img.shields.io/github/release/google/shaka-player.svg?maxAge=2592000?style=plastic)](https://github.com/google/shaka-player/releases/latest)
+
 Shaka Player is a JavaScript library for adaptive video streaming.
 It plays [DASH][] content without browser plugins using
 [MediaSource Extensions][] and [Encrypted Media Extensions][].

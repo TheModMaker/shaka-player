@@ -40,6 +40,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "prepublish": "in-publish && python ./build/checkversion.py && python ./build/all.py || not-in-publish"
+    "prepublish": "in-publish && python ./build/checkversion.py && python ./build/all.py || not-in-publish",
+    "test": "python ./build/test.py"
   }
 }

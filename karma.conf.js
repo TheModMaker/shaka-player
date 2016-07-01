@@ -170,6 +170,11 @@ module.exports = function(config) {
         pseudoActivityInterval: 20000
       },
       // }}}
+
+      Chrome_Travis: {
+        base: 'Chrome',
+        flags: ['--no-sandbox'],
+      },
     },
 
     coverageReporter: {

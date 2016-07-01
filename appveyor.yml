@@ -1,0 +1,27 @@
+version: "{build}"
+
+environment:
+  matrix:
+    - nodejs_version: "6"
+
+matrix:
+  fast_finish: true
+
+install:
+  # Install and upgrade npm if needed.
+  - ps: Install-Product node $env:nodejs_version
+  - npm install -g npm
+
+  # Print debug information
+  - node --version
+  - npm --version
+
+  # Install dependencies.
+  - npm install
+
+test_script:
+  # TODO: Add Microsoft Edge if possible.
+  - python build/test.py --browsers IE,Chrome,Firefox
+
+# This isn't an MSBuild project, so skip build step.
+build: off
