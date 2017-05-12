@@ -38,7 +38,7 @@ describe('TtmlTextParser', function() {
     }
   });
 
-  it('supports no cues', function() {
+  fit('supports no cues', function() {
     verifyHelper([], '<tt></tt>');
   });
 
